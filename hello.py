@@ -42,16 +42,16 @@ def main(robotIP):
     motionProxy.moveInit()
 
     # TARGET VELOCITY
-    X         = 1.0 # move forward
+    X         = 0.0 # move forward
     Y         = 0.0 # move left
-    Theta     = 1.0 # angle at which you turn left
+    Theta     = 0.0 # angle at which you turn left
     Frequency = 1.0 # how often to take steps
 
 
     # Default walk (MaxStepX = 0.04 m)
     # MaxStepX is the length of the step
     motionProxy.setWalkTargetVelocity(X, Y, Theta, Frequency, [["MaxStepX", 0.06]])
-    time.sleep(6.0)
+    time.sleep(9.0)
     print "walk Speed X :",motionProxy.getRobotVelocity()[0]," m/s"
     print "walk Speed Y :",motionProxy.getRobotVelocity()[1], " m/s"
 
